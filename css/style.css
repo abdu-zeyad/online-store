@@ -1,0 +1,54 @@
+body{
+    background-color: salmon;
+}
+header{
+ background-color: red;
+    height: 200px;
+    position: relative;
+}
+header ul  {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: skyblue;
+    width: fit-content;
+    
+}
+header img{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+header ul li{
+    display: inline;
+    padding: 0px 70px 0px 70px ;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+main{
+    background-color: rosybrown;
+    position: relative;
+    
+}
+footer{
+    background-color: royalblue;
+}
+.leftbar{
+    width: 20%;
+    position: absolute;
+    left: 0em;
+    
+}
+.leftbar ul li{
+    padding: 20px 0px 20px 0px ;
+    font-size: 1.2em;
+}
+#productlist{
+    width: 80%;
+    position: absolute;
+    left: 20%;
+    background-color: seagreen;
+    height: 500px;
+}
