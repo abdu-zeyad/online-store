@@ -63,7 +63,7 @@ footer{
     padding: 20px 0px 20px 0px ;
     font-size: 1.2em;
 }
-#productlist{
+#wrap{
     width: 80%;
     position: absolute;
     left: 20%;
@@ -75,4 +75,25 @@ footer{
     display: inline-block;
     padding: 0px 10px 10px ;
 
+}
+
+
+#productlist img:hover{
+transform: scale(1.01);
+}
+
+.masks::before{
+right: 50px;
+}
+.masks::after{
+    left: 50px;
+    }
+
+.masks::before, .masks::after {
+border-top: 2px solid rgb(102, 102, 102);
+display: block;
+position: absolute;
+width: 20em;
+/* top: 50%; */
+content: "";
 }
