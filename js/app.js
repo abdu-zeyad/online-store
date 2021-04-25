@@ -1,7 +1,7 @@
 'use strict';
 
-// const volun = document.getElementById('volunForm');
 const productlist = document.getElementById('productlist');
+
 
 
 function product(picture,name,price,notes) {
@@ -40,22 +40,22 @@ function renderList(){
         let lipic = document.createElement('li');
         ul.appendChild(lipic);
         
-       let  lipicc = document.createElement('IMG');
+       let  lipicc = document.createElement('img');
        lipic.appendChild(lipicc);
-      lipicc.scr =  product.arrOfObject[i].picture;
+       lipicc.src =  product.arrOfObject[i].picture;
     
 
         let liname = document.createElement('li');
         ul.appendChild(liname);
-        liname.textContent =  product.arrOfObject[i].name;
+        liname.textContent = 'Name: '+ product.arrOfObject[i].name;
 
         let liprice = document.createElement('li');
         ul.appendChild(liprice);
-        liprice.textContent =  product.arrOfObject[i].price;
+        liprice.textContent = 'Price: '+ product.arrOfObject[i].price;
 
         let linotes = document.createElement('li');
         ul.appendChild(linotes);
-        linotes.textContent =  product.arrOfObject[i].notes;
+        linotes.textContent = 'notes: '+ product.arrOfObject[i].notes;
    
     }
     
@@ -63,5 +63,3 @@ function renderList(){
 
 renderList();
 
-// console.log(product.arrOfObject);
-// volunForm.addEventListener('submit', handleSubmit)
