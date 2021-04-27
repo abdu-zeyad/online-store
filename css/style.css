@@ -79,7 +79,11 @@ footer{
 
 
 #productlist img:hover{
-transform: scale(1.01);
+/* transform: scale(1.01); */
+-webkit-box-sizing: inherit;
+
+box-sizing: inherit;
+-webkit-box-shadow: 0 2px 16px 4px rgb(40 44 63 / 7%);
 }
 
 .masks::before{
@@ -91,9 +95,14 @@ right: 50px;
 
 .masks::before, .masks::after {
 border-top: 2px solid rgb(102, 102, 102);
-display: block;
 position: absolute;
+top: 16px;
 width: 20em;
-/* top: 50%; */
+
 content: "";
+}
+.masks{
+    text-align: center;
+    font-size: 15.em;
+    margin-bottom: 20px;
 }

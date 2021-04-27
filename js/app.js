@@ -23,8 +23,8 @@ new product('images/cn19140070.webp','picture4',28,'fibermask')
 
 new product('images/cn19140108.webp','picture5',16,'fibermask')
 new product('images/cn19140138.webp','picture6',19,'fibermask')
-new product('images/cn19584550.webp','picture7',12,'fibermask')
-new product('images/cn19584521.webp','picture8',18,'fibermask')
+new product('images/cn19140070.webp','picture7',12,'fibermask')
+new product('images/cn18896255.webp','picture8',18,'fibermask')
 
 
 
@@ -40,7 +40,11 @@ function renderList(){
         let lipic = document.createElement('li');
         ul.appendChild(lipic);
         
-       let  lipicc = document.createElement('img');
+       let  lipicc = document.createElement('img').onmouseover = function(){
+        lipicc.src =  product.arrOfObject[i+1].picture 
+       };
+       lipicc.addEventListener("mouseover", myScript);
+
        lipic.appendChild(lipicc);
        lipicc.src =  product.arrOfObject[i].picture;
     
