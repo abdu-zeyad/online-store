@@ -40,14 +40,10 @@ function renderList(){
         let lipic = document.createElement('li');
         ul.appendChild(lipic);
         
-       let  lipicc = document.createElement('img').onmouseover = function(){
-        lipicc.src =  product.arrOfObject[i+1].picture 
-       };
-       lipicc.addEventListener("mouseover", myScript);
-
-       lipic.appendChild(lipicc);
-       lipicc.src =  product.arrOfObject[i].picture;
-    
+        let lipicc = document.createElement('img');
+        lipicc.src =  product.arrOfObject[i].picture 
+        lipic.appendChild(lipicc)
+       
 
         let liname = document.createElement('li');
         ul.appendChild(liname);
