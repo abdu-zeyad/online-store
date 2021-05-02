@@ -1,10 +1,24 @@
 'use strict';
-let array=[]
-function Test (name,age,number){
-    name.this=name;
-    age.this=age;
-    number.this=number
-    array.push(this);
+
+const array = [];
+
+function test(name, age, number) {
+  this.name=name;
+  this.age=age;
+  this.number=number;
+  array.push(this);
 }
-new Test(ahmad,23,221221);
+new test('ahmad', '23', '221221');
 console.log(array);
+
+function testforma() {
+ let testform= document.getElementById('form1')
+
+  let input = document.createElement('input')
+  testform.appendChild(input)
+  input.setAttribute('type','text')
+  input.setAttribute('value','enter')
+
+    
+}
+testforma();
