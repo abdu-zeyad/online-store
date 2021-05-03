@@ -11,14 +11,19 @@ function test(name, age, number) {
 new test('ahmad', '23', '221221');
 console.log(array);
 
-function testforma() {
- let testform= document.getElementById('form1')
+// function testforma() {
+//  let testform= document.getElementById('form1')
 
-  let input = document.createElement('input')
-  testform.appendChild(input)
-  input.setAttribute('type','text')
-  input.setAttribute('value','enter')
-
+//   let input = document.createElement('input')
+//   testform.appendChild(input)
+//   input.setAttribute('type','text')
+//   input.setAttribute('value','enter')
     
-}
-testforma();
+// }
+// testforma();
+// function render() {
+//   let p =document.createElement('p')
+// p.textContent('hello  world')
+// }
+
+

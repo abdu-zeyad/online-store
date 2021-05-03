@@ -64,3 +64,7 @@ function renderList(){
 renderList();
 
 
+function handlesubmit(event) {
+    event.preventDefault();
+const product=
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,26 +8,37 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/test.css">
 </head>
+
 <body>
-    
+
     <header></header>
     <main>
         <div id="test"></div>
-     <form id="form1"  action="index.html">
-         <!-- <fieldset>
-         <input list='browser'>
-         <datalist id="browser">
-             <option value="bmw"></option>
-             <option value="audi"></option>
-         </datalist>
+        <form id="form1">
+            <fieldset>
+                <legend>form for adding parts</legend>
 
-        </fieldset> -->
-       
-     </form>
+                <label for="nameoftheproduct  ">product picture</label>
+                <input type="file" id="myFile" name="filename">
+                <br>
+                <label for="nameoftheproduct  ">product name</label>
+                <input id="nameoftheproduct  " type="text">
+                <br>
+                <label for="priceoftheproduct  ">product price</label>
+                <input id="priceoftheproduct  " type="number">
+
+                <br>
+                <textarea name="message" rows="10" cols="30">add your notes</textarea>
+                <br>
+                <input type="submit">
+            </fieldset>
+
+        </form>
 
     </main>
     <footer></footer>
 
     <script src="js/test.js"></script>
 </body>
+
 </html>
