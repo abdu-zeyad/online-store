@@ -1,7 +1,7 @@
 'use strict';
 
 const productlist = document.getElementById('productlist');
-
+const form = document.getElementById('form1')
 
 
 function product(picture,name,price,notes) {
@@ -66,5 +66,12 @@ renderList();
 
 function handlesubmit(event) {
     event.preventDefault();
-const product=
+const product= event.target
+const picture = product.picture.value;
+const name= product.name.value;
+const price = product.price.value;
+const notes = product.notes.value;
+new product(picture,name,price,notes)
+console.log(product);
 }
+form1.addEventListener('submit',handlesubmit)

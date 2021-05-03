@@ -1,29 +1,69 @@
 'use strict';
+const form = document.getElementById('form')
+const table = document.getElementById('table')
 
-const array = [];
+function Product(name, age) {
 
-function test(name, age, number) {
-  this.name=name;
-  this.age=age;
-  this.number=number;
-  array.push(this);
+  this.name = name;
+  this.age = age;
+  
+  Product.arrayofobjects.push(this)
 }
-new test('ahmad', '23', '221221');
-console.log(array);
 
-// function testforma() {
-//  let testform= document.getElementById('form1')
+Product.prototype.notes=function () {
+    this.notes=notes;
+   
+}
 
-//   let input = document.createElement('input')
-//   testform.appendChild(input)
-//   input.setAttribute('type','text')
-//   input.setAttribute('value','enter')
-    
-// }
-// testforma();
-// function render() {
-//   let p =document.createElement('p')
-// p.textContent('hello  world')
-// }
+Product.arrayofobjects = [];
+console.log(Product.arrayofobjects);
 
+function submit(event) {
+  event.preventDefault();
+  const product = event.target;
+  const name = product.name.value;
+  const age = product.age.value;
+  const notes= product.notes.value;
+  let hello = new Product(name, age)
+  hello.notes();
+  console.log(notes);
+  save();
+  getting();
+}
+form.addEventListener('submit', submit)
 
+function render() {
+  table.textContent = '';
+  
+
+  const row = document.createElement('tr')
+  form.appendChild(row);
+
+  const cell1 = document.createElement('th')
+  row.appendChild(cell1);
+  cell1.textContent = Product.arrayofobjects[0].name
+
+  const cell2 = document.createElement('th')
+  row.appendChild(cell2);
+  cell2.textContent = Product.arrayofobjects[0].age
+
+  const cell3 = document.createElement('th')
+  row.appendChild(cell3);
+  cell3.textContent = Product.arrayofobjects[0].notes
+
+  console.log(Product.arrayofobjects[0]);
+}
+
+function save() {
+  let savetol=JSON.stringify(Product.arrayofobjects)
+  localStorage.setItem('saveditems',savetol)
+}
+
+function getting() {
+  let date = localStorage.getItem('saveditems')
+  let conv = JSON.parse(date)
+  if (conv!== null) {
+    Product.arrayofobjects=conv
+  }
+  render();
+}
