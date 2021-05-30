@@ -1,77 +1,77 @@
 'use strict';
 
-const productlist = document.getElementById('productlist');
-const form = document.getElementById('form1')
+const Productlist = document.getElementById('Productlist');
+const form = document.getElementById('form1');
 
 
-function product(picture,name,price,notes) {
-    this.picture = picture;
-    this.name = name;
-    this.price = price;
-    this.notes = notes;
-    product.arrOfObject.push(this);
+function Product (picture,name,price,notes) {
+  this.picture = picture;
+  this.name = name;
+  this.price = price;
+  this.notes = notes;
+  Product.arrOfObject.push(this);
 }
 
-product.arrOfObject = [];
-console.log(product.arrOfObject);
+Product.arrOfObject = [];
+console.log(Product.arrOfObject);
 
 
-new product('images/cn18896255.webp','picture1',18,'fibermask')
-new product('images/cn19045146.webp','picture2',13,'fibermask')
-new product('images/cn19140056.webp','picture3',15,'fibermask')
-new product('images/cn19140070.webp','picture4',28,'fibermask')
+new Product('images/cn18896255.webp','picture1',18,'fibermask');
+new Product('images/cn19045146.webp','picture2',13,'fibermask');
+new Product('images/cn19140056.webp','picture3',15,'fibermask');
+new Product('images/cn19140070.webp','picture4',28,'fibermask');
 
-new product('images/cn19140108.webp','picture5',16,'fibermask')
-new product('images/cn19140138.webp','picture6',19,'fibermask')
-new product('images/cn19140070.webp','picture7',12,'fibermask')
-new product('images/cn18896255.webp','picture8',18,'fibermask')
+new Product('images/cn19140108.webp','picture5',16,'fibermask');
+new Product('images/cn19140138.webp','picture6',19,'fibermask');
+new Product('images/cn19140070.webp','picture7',12,'fibermask');
+new Product('ئimages/cn18896255.webp','picture8',18,'fibermask');
 
 
 
 function renderList(){
-    productlist.textContent='';
+  Productlist.textContent='';
 
-    for (let i=0 ; i<product.arrOfObject.length; i++){
-        const div = document.createElement('div')
-        productlist.appendChild(div); 
-       let ul = document.createElement('ul');
-       div.appendChild(ul);
+  for (let i=0 ; i<Product.arrOfObject.length; i++){
+    const div = document.createElement('div');
+    Productlist.appendChild(div);
+    let ul = document.createElement('ul');
+    div.appendChild(ul);
 
-        let lipic = document.createElement('li');
-        ul.appendChild(lipic);
-        
-        let lipicc = document.createElement('img');
-        lipicc.src =  product.arrOfObject[i].picture 
-        lipic.appendChild(lipicc)
-       
+    let lipic = document.createElement('li');
+    ul.appendChild(lipic);
 
-        let liname = document.createElement('li');
-        ul.appendChild(liname);
-        liname.textContent = 'Name: '+ product.arrOfObject[i].name;
+    let lipicc = document.createElement('img');
+    lipicc.src = Product.arrOfObject[i].picture;
+    lipic.appendChild(lipicc);
 
-        let liprice = document.createElement('li');
-        ul.appendChild(liprice);
-        liprice.textContent = 'Price: '+ product.arrOfObject[i].price;
 
-        let linotes = document.createElement('li');
-        ul.appendChild(linotes);
-        linotes.textContent = 'notes: '+ product.arrOfObject[i].notes;
-   
-    }
-    
+    let liname = document.createElement('li');
+    ul.appendChild(liname);
+    liname.textContent = 'Name: '+ Product.arrOfObject[i].name;
+
+    let liprice = document.createElement('li');
+    ul.appendChild(liprice);
+    liprice.textContent = 'Price: '+ Product.arrOfObject[i].price;
+
+    let linotes = document.createElement('li');
+    ul.appendChild(linotes);
+    linotes.textContent = 'notes: '+ Product.arrOfObject[i].notes;
+
+  }
+
 }
 
 renderList();
 
 
 function handlesubmit(event) {
-    event.preventDefault();
-const product= event.target
-const picture = product.picture.value;
-const name= product.name.value;
-const price = product.price.value;
-const notes = product.notes.value;
-new product(picture,name,price,notes)
-console.log(product);
+  event.preventDefault();
+  const Product= event.target;
+  const picture = Product.picture.value;
+  const name= Product.name.value;
+  const price = Product.price.value;
+  const notes = Product.notes.value;
+  new Product(picture,name,price,notes);
+  console.log(Product);
 }
-form1.addEventListener('submit',handlesubmit)
+form.addEventListener('submit',handlesubmit);
