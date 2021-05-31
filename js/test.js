@@ -10,8 +10,8 @@ function Product(name, age) {
   Product.arrayofobjects.push(this);
 }
 
-Product.prototype.notes=function (notes) {
-  this.notes=notes;
+Product.prototype.notes = function (notes) {
+  this.notes = notes;
 
 };
 
@@ -23,7 +23,7 @@ function submit(event) {
   const product = event.target;
   const name = product.name.value;
   const age = product.age.value;
-  const notes= product.notes.value;
+  const notes = product.notes.value;
   let hello = new Product(name, age);
   hello.notes();
   console.log(notes);
@@ -55,15 +55,15 @@ function render() {
 }
 
 function save() {
-  let savetol=JSON.stringify(Product.arrayofobjects);
-  localStorage.setItem('saveditems',savetol);
+  let savetol = JSON.stringify(Product.arrayofobjects);
+  localStorage.setItem('saveditems', savetol);
 }
 
 function getting() {
   let date = localStorage.getItem('saveditems');
   let conv = JSON.parse(date);
-  if (conv!== null) {
-    Product.arrayofobjects=conv;
+  if (conv !== null) {
+    Product.arrayofobjects = conv;
   }
   render();
 }

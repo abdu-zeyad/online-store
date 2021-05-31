@@ -1,6 +1,6 @@
 'use strict';
 
-const Productlist = document.getElementById('Productlist');
+const Productlist = document.getElementById('productlist');
 const form = document.getElementById('form1');
 
 
@@ -24,7 +24,7 @@ new Product('images/cn19140070.webp','picture4',28,'fibermask');
 new Product('images/cn19140108.webp','picture5',16,'fibermask');
 new Product('images/cn19140138.webp','picture6',19,'fibermask');
 new Product('images/cn19140070.webp','picture7',12,'fibermask');
-new Product('ئimages/cn18896255.webp','picture8',18,'fibermask');
+new Product('images/cn18896255.webp','picture8',18,'fibermask');
 
 
 
